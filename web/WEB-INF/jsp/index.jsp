@@ -8,13 +8,27 @@
         <title>Welcome to Spring Web MVC project</title>
     </head>
 
-    <body>
-        <script src="../annyang/annyang.min.js" type="text/javascript" ></script>
-        <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
-        <p><i>To display a different welcome page for this project, modify</i>
-            <tt>index.jsp</tt> <i>, or create your own welcome page then change
-                the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
-                welcome page and also update the welcome-file setting in</i>
-            <tt>web.xml</tt>.</p>
-    </body>
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js" type="text/javascript" ></script>
+        <script>
+        if (annyang) {
+            alert("esto si sirve");
+          // Let's define our first command. First the text we expect, and then the function it should call
+          var commands = {
+            'hi': function() {
+              alert("hola");
+            }
+          };
+
+          // Add our commands to annyang
+          annyang.addCommands(commands);
+
+          // Start listening. You can call this here, or attach this call to an event, button, etc.
+          annyang.start();
+        }
+        </script>
+        <p>QUE HONGO!</p>
+       
+            
+    
 </html>
