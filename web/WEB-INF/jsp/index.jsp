@@ -15,10 +15,12 @@
             alert("esto si sirve");
           // Let's define our first command. First the text we expect, and then the function it should call
           var commands = {
-            'hi': function() {
-              alert("hola");
-            }
+            'hello': saludo
           };
+           var saludo = function(){
+               Console.log("saludo");
+                alert("hola");
+           }
 
           // Add our commands to annyang
           annyang.addCommands(commands);
